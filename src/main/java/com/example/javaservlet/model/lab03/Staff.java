@@ -1,4 +1,4 @@
-package com.example.javaservlet.model;
+package com.example.javaservlet.model.lab03;
 
 import java.util.Date;
 

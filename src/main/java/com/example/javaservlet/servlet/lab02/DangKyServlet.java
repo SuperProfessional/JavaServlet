@@ -11,7 +11,7 @@ public class DangKyServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
         response.setCharacterEncoding("utf-8");
-        request.getRequestDispatcher("/views/dang-ky/form.jsp").forward(request, response);
+        request.getRequestDispatcher("/views/lab02/dang-ky/form.jsp").forward(request, response);
     }
 
     @Override
@@ -53,6 +53,6 @@ public class DangKyServlet extends HttpServlet {
         request.setAttribute("notes", notes);
         request.setAttribute("hobbies", soThich);
 
-        request.getRequestDispatcher("/views/dang-ky/result.jsp").forward(request, response);
+        request.getRequestDispatcher("/views/lab02/dang-ky/result.jsp").forward(request, response);
     }
 }

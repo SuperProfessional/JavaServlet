@@ -9,7 +9,7 @@ import java.io.IOException;
 public class TamGiacServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/views/htg/tam-giac.jsp").forward(request, response);
+        request.getRequestDispatcher("/views/lab02/htg/tam-giac.jsp").forward(request, response);
     }
 
     @Override
@@ -29,6 +29,6 @@ public class TamGiacServlet extends HttpServlet {
         } else {
             request.setAttribute("message", "Không thỏa mãn cách cạnh của một tam giác!");
         }
-        request.getRequestDispatcher("/views/htg/tam-giac.jsp").forward(request, response);
+        request.getRequestDispatcher("/views/lab02/htg/tam-giac.jsp").forward(request, response);
     }
 }

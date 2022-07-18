@@ -17,16 +17,13 @@ public class UploadServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
         response.setCharacterEncoding("utf-8");
-        request.getRequestDispatcher("/views/upload/form.jsp").forward(request, response);
+        request.getRequestDispatcher("/views/lab03/upload/form.jsp").forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // đường dẫn thư mục tính từ gốc của website
-        File dir = new File(request.getServletContext().getRealPath("/upload"));
-        if (!dir.exists()) { // tạo nếu chưa tồn tại
-            dir.mkdirs();
-        }
+        File dir = com.example.javaservlet.utility.Mkdir.mkdirUpload(request);
 
         // lưu các file upload vào thư mục files
         Part photo = request.getPart("photo"); // file hình
@@ -40,6 +37,6 @@ public class UploadServlet extends HttpServlet {
         request.setAttribute("img", photoFile);
         request.setAttribute("doc", docFile);
 
-        request.getRequestDispatcher("/views/upload/result.jsp").forward(request, response);
+        request.getRequestDispatcher("/views/lab03/upload/result.jsp").forward(request, response);
     }
 }

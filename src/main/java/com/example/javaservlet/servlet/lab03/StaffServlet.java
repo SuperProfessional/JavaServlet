@@ -1,6 +1,6 @@
 package com.example.javaservlet.servlet.lab03;
 
-import com.example.javaservlet.model.Staff;
+import com.example.javaservlet.model.lab03.Staff;
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.beanutils.ConvertUtils;
 import org.apache.commons.beanutils.converters.DateConverter;
@@ -22,7 +22,7 @@ public class StaffServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
         response.setCharacterEncoding("utf-8");
-        request.getRequestDispatcher("/views/staff/form.jsp").forward(request, response);
+        request.getRequestDispatcher("/views/lab03/staff/form.jsp").forward(request, response);
     }
 
     @Override
@@ -38,7 +38,6 @@ public class StaffServlet extends HttpServlet {
             // Đọc tham số vào các thuộc tính của bean staff
             BeanUtils.populate(staff, request.getParameterMap());
 
-            System.out.println(staff.toString());
             // Chia sẻ với result.jsp
             request.setAttribute("staff",staff);
         } catch (IllegalAccessException e) {
@@ -46,6 +45,6 @@ public class StaffServlet extends HttpServlet {
         } catch (InvocationTargetException e) {
             throw new RuntimeException(e);
         }
-        request.getRequestDispatcher("/views/staff/result.jsp").forward(request, response);
+        request.getRequestDispatcher("/views/lab03/staff/result.jsp").forward(request, response);
     }
 }

@@ -9,7 +9,7 @@ import java.io.IOException;
 public class ChuNhatServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/views/hcn/form.jsp").forward(request, response);
+        request.getRequestDispatcher("/views/lab01/hcn/form.jsp").forward(request, response);
     }
 
     @Override
@@ -23,6 +23,6 @@ public class ChuNhatServlet extends HttpServlet {
         request.setAttribute("cv",chuVi);
         request.setAttribute("dt",dienTich);
 
-        request.getRequestDispatcher("/views/hcn/success.jsp").forward(request,response);
+        request.getRequestDispatcher("/views/lab01/hcn/success.jsp").forward(request,response);
     }
 }
