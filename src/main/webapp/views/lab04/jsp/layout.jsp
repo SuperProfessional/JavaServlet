@@ -16,7 +16,7 @@
 </head>
 
 <body>
-<div>
+<div class="container-fluid">
     <header class="row">
         <div class="col-sm-9">Online Shopping Mall</div>
         <div class="col-sm-3">
@@ -27,7 +27,7 @@
 
     </header>
     <jsp:include page="menu.jsp"/>
-    <div class="container">
+    <div >
         <div class="row">
             <article class="col-sm-9">
                 <div class="row">

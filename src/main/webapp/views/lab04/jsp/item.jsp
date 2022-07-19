@@ -3,10 +3,7 @@
 <div class="col-sm-4" style="margin-top: 10px;">
     <div class="card">
         <div class="card-body">
-            <div>
-                <%--<a>${param.image}</a>--%>
-                <img src="${param.image}" alt="">
-            </div>
+                <img src="${param.image}" alt="" style="height: 270px">
         </div>
         <div class="card-footer">
             <a>${param.name}</a>
